@@ -1,0 +1,25 @@
+services:
+  ledweb:
+    build: .
+    container_name: ledweb
+    ports:
+      - "8010:8000"
+    environment:
+      - GPIO_PIN=17
+    privileged: true
+    group_add:
+      - "986"
+    devices:
+      - "/dev/gpiochip0:/dev/gpiochip0"
+      - "/dev/gpiochip10:/dev/gpiochip10"
+      - "/dev/gpiochip11:/dev/gpiochip11"
+      - "/dev/gpiochip12:/dev/gpiochip12"
+      - "/dev/gpiochip13:/dev/gpiochip13"
+      - "/dev/gpiomem0:/dev/gpiomem0"
+      - "/dev/gpiomem1:/dev/gpiomem1"
+      - "/dev/gpiomem2:/dev/gpiomem2"
+      - "/dev/gpiomem3:/dev/gpiomem3"
+      - "/dev/gpiomem4:/dev/gpiomem4"
+    volumes:
+      - ./config/io.yaml:/app/config/io.yaml:ro
+    restart: unless-stopped
