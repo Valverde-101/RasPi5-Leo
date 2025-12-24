@@ -9,4 +9,4 @@ if [ -e /dev/gpiomem0 ] && [ ! -e /dev/gpiomem4 ]; then
   ln -sf /dev/gpiomem0 /dev/gpiomem4
 fi
 
-exec uvicorn app:app --host 0.0.0.0 --port 8000
+exec uvicorn app:app --host 0.0.0.0 --port 8010

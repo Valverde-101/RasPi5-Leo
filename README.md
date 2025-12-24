@@ -28,7 +28,7 @@ inputs:
 ## Ejecución local
 
 ```bash
-uvicorn app:app --reload --port 8000
+uvicorn app:app --reload --port 8010
 ```
 
 En producción se usa Docker (ver `Dockerfile` y `docker-compose.yml`).
@@ -52,9 +52,9 @@ En producción se usa Docker (ver `Dockerfile` y `docker-compose.yml`).
    ```
 4. Ejecuta el servidor (usa `config/io.yaml` por defecto, o cambia la ruta con `IO_CONFIG_PATH`):
    ```bash
-   uvicorn app:app --host 0.0.0.0 --port 8000
+   uvicorn app:app --host 0.0.0.0 --port 8010
    # Ejemplo con otro YAML
-   IO_CONFIG_PATH=/ruta/a/archivo.yaml uvicorn app:app --host 0.0.0.0 --port 8000
+   IO_CONFIG_PATH=/ruta/a/archivo.yaml uvicorn app:app --host 0.0.0.0 --port 8010
    ```
 
 ### Opción B: Docker / Docker Compose
@@ -63,7 +63,7 @@ En producción se usa Docker (ver `Dockerfile` y `docker-compose.yml`).
    ```bash
    docker compose build
    ```
-3. Arranca el servicio (expone el puerto 8010 -> 8000):
+3. Arranca el servicio (expone el puerto 8010 -> 8010):
    ```bash
    docker compose up -d
    ```
