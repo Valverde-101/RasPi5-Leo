@@ -1,0 +1,19 @@
+outputs:
+  - id: led1
+    name: "LED Principal"
+    bcm: 17
+    type: led
+    active_high: true
+
+  - id: led2
+    name: "LED Aux"
+    bcm: 27
+    type: led
+    active_high: true
+
+inputs:
+  - id: in1
+    name: "Entrada demo"
+    bcm: 22
+    type: button
+    pull_up: true
