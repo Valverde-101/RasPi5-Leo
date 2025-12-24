@@ -35,12 +35,9 @@ class IOManager:
     def config(self) -> Dict[str, Any]:
         return self._config
 
-    def reload(self, config_path: str | Path | None = None):
+    def reload(self):
         with self._lock:
             self._last_error = None
-
-            if config_path:
-                self.config_path = Path(config_path)
 
             # Apaga y cierra lo previo
             for dev in self._outputs.values():
