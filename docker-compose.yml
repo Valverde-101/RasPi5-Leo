@@ -3,7 +3,7 @@ services:
     build: .
     container_name: ledweb
     ports:
-      - "8010:8000"
+      - "8010:8010"
     environment:
       - GPIO_PIN=17
     privileged: true
